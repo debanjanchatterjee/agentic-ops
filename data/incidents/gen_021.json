@@ -1,0 +1,8 @@
+{
+  "id": "gen-021",
+  "alert": "ALERT CPUSaturation severity=warning namespace=default pod=profile-7c5d6b7d66-r2d8h summary=\"CPU saturation on profile-7c5d6b7d66-r2d8h\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"profile-7c5d6b7d66-r2d8h\", \"namespace\": \"default\"}\n2026-02-05T09:00:01.001Z profile-7c5d6b7d66-r2d8h app[1]: INFO request_id=af2c latency_ms=12 status=200\n2026-02-05T09:00:01.120Z profile-7c5d6b7d66-r2d8h app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:06.812Z profile-7c5d6b7d66-r2d8h app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:03.881Z profile-7c5d6b7d66-r2d8h app[1]: INFO db query ok rows=42\n2026-02-05T09:00:08.114Z profile-7c5d6b7d66-r2d8h app[1]: DEBUG retries=0\n2026-02-05T13:44:02.112Z profile-7c5d6b7d66-r2d8h app[1]: latency p95=920ms; qps=1800\n2026-02-05T13:44:02.113Z profile-7c5d6b7d66-r2d8h app[1]: cpu usage 96% for 8m\n2026-02-05T13:44:05.771Z profile-7c5d6b7d66-r2d8h kubelet: CPU throttling detected; cfs_quota_us=100000",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 7.6
+}

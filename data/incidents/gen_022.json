@@ -1,0 +1,8 @@
+{
+  "id": "gen-022",
+  "alert": "ALERT CPUSaturation severity=critical namespace=payments pod=recommendation-6c7c6c69b4-8qz9p summary=\"HPA throttling disabled; CPU > 90% in payments\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"recommendation-6c7c6c69b4-8qz9p\", \"namespace\": \"payments\"}\n2026-02-05T09:00:07.512Z recommendation-6c7c6c69b4-8qz9p app[1]: INFO write path latency_ms=18\n2026-02-05T09:00:02.555Z recommendation-6c7c6c69b4-8qz9p envoy: http2: stream closed (NO_ERROR)\n2026-02-05T09:00:06.812Z recommendation-6c7c6c69b4-8qz9p app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:01.120Z recommendation-6c7c6c69b4-8qz9p app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:08.114Z recommendation-6c7c6c69b4-8qz9p app[1]: DEBUG retries=0\n2026-02-05T13:44:02.112Z recommendation-6c7c6c69b4-8qz9p app[1]: latency p95=920ms; qps=1800\n2026-02-05T13:44:02.113Z recommendation-6c7c6c69b4-8qz9p app[1]: cpu usage 96% for 8m\n2026-02-05T13:44:05.771Z recommendation-6c7c6c69b4-8qz9p kubelet: CPU throttling detected; cfs_quota_us=100000",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 8.2
+}

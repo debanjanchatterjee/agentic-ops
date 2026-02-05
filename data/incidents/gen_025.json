@@ -1,0 +1,8 @@
+{
+  "id": "gen-025",
+  "alert": "ALERT CPUSaturation severity=critical namespace=checkout pod=profile-7c5d6b7d66-r2d8h summary=\"CPU saturation on profile-7c5d6b7d66-r2d8h\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"profile-7c5d6b7d66-r2d8h\", \"namespace\": \"checkout\"}\n2026-02-05T09:00:07.512Z profile-7c5d6b7d66-r2d8h app[1]: INFO write path latency_ms=18\n2026-02-05T09:00:01.120Z profile-7c5d6b7d66-r2d8h app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:08.114Z profile-7c5d6b7d66-r2d8h app[1]: DEBUG retries=0\n2026-02-05T09:00:06.044Z profile-7c5d6b7d66-r2d8h kubelet: Container profile-7c5d6b7d66-r2d8h readiness probe succeeded\n2026-02-05T09:00:06.812Z profile-7c5d6b7d66-r2d8h app[1]: INFO background job completed id=job-9122\n2026-02-05T13:49:11.900Z profile-7c5d6b7d66-r2d8h app[1]: WARN request backlog increasing; queue_depth=820\n2026-02-05T13:49:12.102Z profile-7c5d6b7d66-r2d8h app[1]: cpu usage 92% for 5m",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 7.3
+}

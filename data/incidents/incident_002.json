@@ -1,0 +1,8 @@
+{
+  "id": "inc-002",
+  "alert": "5xx error rate above 20% for checkout",
+  "logs": "upstream connect error or disconnect/reset before headers; connection refused",
+  "expected_root_cause": "service_unavailable",
+  "expected_action": "restart_deployment",
+  "mttr_baseline_minutes": 6.0
+}

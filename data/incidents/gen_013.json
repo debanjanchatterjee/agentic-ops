@@ -1,0 +1,8 @@
+{
+  "id": "gen-013",
+  "alert": "ALERT NodeDiskPressure severity=warning namespace=prod pod=payments-api-6b8c4f7d7c-4t2hx summary=\"Pod scheduling failures due to disk pressure in prod\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"payments-api-6b8c4f7d7c-4t2hx\", \"namespace\": \"prod\"}\n2026-02-05T09:00:01.120Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:03.881Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO db query ok rows=42\n2026-02-05T09:00:05.313Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO healthcheck passed\n2026-02-05T09:00:08.114Z payments-api-6b8c4f7d7c-4t2hx app[1]: DEBUG retries=0\n2026-02-05T09:00:02.241Z payments-api-6b8c4f7d7c-4t2hx app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T10:02:09.772Z kubelet: eviction manager: must evict pod(s) to reclaim ephemeral-storage\n2026-02-05T10:02:11.022Z payments-api-6b8c4f7d7c-4t2hx kubelet: Error: failed to create pod sandbox: rpc error: code = Unknown desc = failed to create containerd task: no space left on device\n2026-02-05T10:02:11.045Z payments-api-6b8c4f7d7c-4t2hx containerd: failed to create temp dir /var/lib/containerd/tmp: no space left on device",
+  "expected_root_cause": "disk_full",
+  "expected_action": "clear_disk",
+  "mttr_baseline_minutes": 11.7
+}

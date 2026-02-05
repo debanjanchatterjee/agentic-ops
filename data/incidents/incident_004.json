@@ -1,0 +1,8 @@
+{
+  "id": "inc-004",
+  "alert": "DNS failures for payments service",
+  "logs": "lookup payments-db on 10.96.0.10:53: no such host (NXDOMAIN)",
+  "expected_root_cause": "dns_failure",
+  "expected_action": "flush_dns_cache",
+  "mttr_baseline_minutes": 7.0
+}

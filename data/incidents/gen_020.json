@@ -1,0 +1,8 @@
+{
+  "id": "gen-020",
+  "alert": "ALERT CPUSaturation severity=warning namespace=checkout pod=payments-api-6b8c4f7d7c-4t2hx summary=\"CPU saturation on payments-api-6b8c4f7d7c-4t2hx\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"payments-api-6b8c4f7d7c-4t2hx\", \"namespace\": \"checkout\"}\n2026-02-05T09:00:02.241Z payments-api-6b8c4f7d7c-4t2hx app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T09:00:06.812Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:01.120Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:03.881Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO db query ok rows=42\n2026-02-05T13:44:02.112Z payments-api-6b8c4f7d7c-4t2hx app[1]: latency p95=920ms; qps=1800\n2026-02-05T13:44:02.113Z payments-api-6b8c4f7d7c-4t2hx app[1]: cpu usage 96% for 8m\n2026-02-05T13:44:05.771Z payments-api-6b8c4f7d7c-4t2hx kubelet: CPU throttling detected; cfs_quota_us=100000",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 9.4
+}

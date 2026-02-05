@@ -1,0 +1,8 @@
+{
+  "id": "gen-002",
+  "alert": "ALERT CPUSaturation severity=warning namespace=default pod=inventory-5b6dbf7cdb-h7m5w summary=\"CPU saturation on inventory-5b6dbf7cdb-h7m5w\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"inventory-5b6dbf7cdb-h7m5w\", \"namespace\": \"default\"}\n{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"inventory-5b6dbf7cdb-h7m5w\", \"namespace\": \"default\"}\n2026-02-05T09:00:01.001Z inventory-5b6dbf7cdb-h7m5w app[1]: INFO request_id=af2c latency_ms=12 status=200\n2026-02-05T09:00:02.555Z inventory-5b6dbf7cdb-h7m5w envoy: http2: stream closed (NO_ERROR)\n2026-02-05T09:00:08.114Z inventory-5b6dbf7cdb-h7m5w app[1]: DEBUG retries=0\n2026-02-05T09:00:03.881Z inventory-5b6dbf7cdb-h7m5w app[1]: INFO db query ok rows=42\n2026-02-05T09:00:01.120Z inventory-5b6dbf7cdb-h7m5w app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:02.241Z inventory-5b6dbf7cdb-h7m5w app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T13:44:02.112Z inventory-5b6dbf7cdb-h7m5w app[1]: latency p95=920ms; qps=1800\n2026-02-05T13:44:02.113Z inventory-5b6dbf7cdb-h7m5w app[1]: cpu usage 96% for 8m\n2026-02-05T13:44:05.771Z inventory-5b6dbf7cdb-h7m5w kubelet: CPU throttling detected; cfs_quota_us=100000",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 8.9
+}

@@ -1,0 +1,8 @@
+{
+  "id": "gen-008",
+  "alert": "ALERT ConfigInvalid severity=warning namespace=search pod=inventory-5b6dbf7cdb-h7m5w summary=\"Invalid config detected in search\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"inventory-5b6dbf7cdb-h7m5w\", \"namespace\": \"search\"}\n2026-02-05T09:00:06.044Z inventory-5b6dbf7cdb-h7m5w kubelet: Container inventory-5b6dbf7cdb-h7m5w readiness probe succeeded\n2026-02-05T09:00:05.313Z inventory-5b6dbf7cdb-h7m5w app[1]: INFO healthcheck passed\n2026-02-05T09:00:08.114Z inventory-5b6dbf7cdb-h7m5w app[1]: DEBUG retries=0\n2026-02-05T09:00:01.120Z inventory-5b6dbf7cdb-h7m5w app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:06.812Z inventory-5b6dbf7cdb-h7m5w app[1]: INFO background job completed id=job-9122\n2026-02-05T12:08:01.501Z inventory-5b6dbf7cdb-h7m5w app[1]: ERROR invalid value for 'retries': -1\n2026-02-05T12:08:01.502Z inventory-5b6dbf7cdb-h7m5w app[1]: config schema validation failed",
+  "expected_root_cause": "bad_config",
+  "expected_action": "roll_back_config",
+  "mttr_baseline_minutes": 7.8
+}

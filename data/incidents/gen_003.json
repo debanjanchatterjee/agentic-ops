@@ -1,0 +1,8 @@
+{
+  "id": "gen-003",
+  "alert": "ALERT CPUSaturation severity=critical namespace=default pod=search-api-5b4c7cd6c8-9m5qk summary=\"CPU saturation on search-api-5b4c7cd6c8-9m5qk\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"search-api-5b4c7cd6c8-9m5qk\", \"namespace\": \"default\"}\n{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"search-api-5b4c7cd6c8-9m5qk\", \"namespace\": \"default\"}\n2026-02-05T09:00:08.114Z search-api-5b4c7cd6c8-9m5qk app[1]: DEBUG retries=0\n2026-02-05T09:00:01.001Z search-api-5b4c7cd6c8-9m5qk app[1]: INFO request_id=af2c latency_ms=12 status=200\n2026-02-05T09:00:02.555Z search-api-5b4c7cd6c8-9m5qk envoy: http2: stream closed (NO_ERROR)\n2026-02-05T13:44:02.112Z search-api-5b4c7cd6c8-9m5qk app[1]: latency p95=920ms; qps=1800\n2026-02-05T13:44:02.113Z search-api-5b4c7cd6c8-9m5qk app[1]: cpu usage 96% for 8m\n2026-02-05T13:44:05.771Z search-api-5b4c7cd6c8-9m5qk kubelet: CPU throttling detected; cfs_quota_us=100000",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 9.9
+}

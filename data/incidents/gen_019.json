@@ -1,0 +1,8 @@
+{
+  "id": "gen-019",
+  "alert": "ALERT DNSFailure severity=warning namespace=search pod=orders-7f6c8b9cd8-j2l4m summary=\"NXDOMAIN spike for service discovery in search\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"orders-7f6c8b9cd8-j2l4m\", \"namespace\": \"search\"}\n2026-02-05T09:00:06.812Z orders-7f6c8b9cd8-j2l4m app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:07.512Z orders-7f6c8b9cd8-j2l4m app[1]: INFO write path latency_ms=18\n2026-02-05T09:00:06.044Z orders-7f6c8b9cd8-j2l4m kubelet: Container orders-7f6c8b9cd8-j2l4m readiness probe succeeded\n2026-02-05T09:00:08.114Z orders-7f6c8b9cd8-j2l4m app[1]: DEBUG retries=0\n2026-02-05T09:00:03.881Z orders-7f6c8b9cd8-j2l4m app[1]: INFO db query ok rows=42\n2026-02-05T11:18:45.608Z orders-7f6c8b9cd8-j2l4m app[1]: error: dial tcp: lookup payments-db on 10.96.0.10:53: no such host\n2026-02-05T11:18:45.609Z orders-7f6c8b9cd8-j2l4m app[1]: retrying in 1000ms\n2026-02-05T11:18:46.612Z orders-7f6c8b9cd8-j2l4m app[1]: error: DNS query failed (NXDOMAIN)\n2026-02-05T11:18:50.010Z coredns: [ERROR] plugin/errors: 2 payments-db.default.svc.cluster.local. A: read udp 10.96.0.10:53: i/o timeout",
+  "expected_root_cause": "dns_failure",
+  "expected_action": "flush_dns_cache",
+  "mttr_baseline_minutes": 5.6
+}

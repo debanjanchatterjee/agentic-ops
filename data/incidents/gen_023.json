@@ -1,0 +1,8 @@
+{
+  "id": "gen-023",
+  "alert": "ALERT PodOOMKilled severity=warning namespace=checkout pod=recommendation-6c7c6c69b4-8qz9p summary=\"High restart count on recommendation-6c7c6c69b4-8qz9p in checkout\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"recommendation-6c7c6c69b4-8qz9p\", \"namespace\": \"checkout\"}\n{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"recommendation-6c7c6c69b4-8qz9p\", \"namespace\": \"checkout\"}\n2026-02-05T09:00:02.241Z recommendation-6c7c6c69b4-8qz9p app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T09:00:05.313Z recommendation-6c7c6c69b4-8qz9p app[1]: INFO healthcheck passed\n2026-02-05T09:00:08.114Z recommendation-6c7c6c69b4-8qz9p app[1]: DEBUG retries=0\n2026-02-05T09:18:09.009Z recommendation-6c7c6c69b4-8qz9p app[1]: ERROR fatal error: runtime: out of memory\n2026-02-05T09:18:09.010Z recommendation-6c7c6c69b4-8qz9p app[1]: goroutine 2241 [running]:\n2026-02-05T09:18:09.012Z recommendation-6c7c6c69b4-8qz9p app[1]: main.(*Cache).Allocate(0xc000a2f4f0, 0x8000000)\n2026-02-05T09:18:09.015Z recommendation-6c7c6c69b4-8qz9p kubelet: Container recommendation-6c7c6c69b4-8qz9p in checkout terminated with exit code 137",
+  "expected_root_cause": "pod_memory_oom",
+  "expected_action": "increase_memory_limit",
+  "mttr_baseline_minutes": 7.3
+}

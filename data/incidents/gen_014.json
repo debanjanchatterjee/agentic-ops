@@ -1,0 +1,8 @@
+{
+  "id": "gen-014",
+  "alert": "ALERT CPUSaturation severity=warning namespace=prod pod=auth-6bb9c7f8c9-v8l2x summary=\"CPU saturation on auth-6bb9c7f8c9-v8l2x\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"auth-6bb9c7f8c9-v8l2x\", \"namespace\": \"prod\"}\n{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"auth-6bb9c7f8c9-v8l2x\", \"namespace\": \"prod\"}\n{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"auth-6bb9c7f8c9-v8l2x\", \"namespace\": \"prod\"}\n2026-02-05T09:00:02.555Z auth-6bb9c7f8c9-v8l2x envoy: http2: stream closed (NO_ERROR)\n2026-02-05T09:00:07.512Z auth-6bb9c7f8c9-v8l2x app[1]: INFO write path latency_ms=18\n2026-02-05T09:00:06.812Z auth-6bb9c7f8c9-v8l2x app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:02.241Z auth-6bb9c7f8c9-v8l2x app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T13:49:11.900Z auth-6bb9c7f8c9-v8l2x app[1]: WARN request backlog increasing; queue_depth=820\n2026-02-05T13:49:12.102Z auth-6bb9c7f8c9-v8l2x app[1]: cpu usage 92% for 5m",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 8.4
+}

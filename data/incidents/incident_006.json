@@ -1,0 +1,8 @@
+{
+  "id": "inc-006",
+  "alert": "CPU saturation on recommendation service",
+  "logs": "cpu usage > 95% for 10m; HPA disabled",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 10.0
+}

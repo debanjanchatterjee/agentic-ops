@@ -1,0 +1,8 @@
+{
+  "id": "inc-008",
+  "alert": "Disk usage creeping for batch nodes",
+  "logs": "DiskPressure true; image garbage collection failed",
+  "expected_root_cause": "disk_full",
+  "expected_action": "clear_disk",
+  "mttr_baseline_minutes": 11.0
+}

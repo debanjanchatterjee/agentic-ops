@@ -1,0 +1,8 @@
+{
+  "id": "inc-001",
+  "alert": "High restart count on api-service pods",
+  "logs": "Container terminated with OOMKilled after 512Mi limit.",
+  "expected_root_cause": "pod_memory_oom",
+  "expected_action": "increase_memory_limit",
+  "mttr_baseline_minutes": 8.5
+}

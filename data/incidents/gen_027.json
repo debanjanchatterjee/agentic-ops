@@ -1,0 +1,8 @@
+{
+  "id": "gen-027",
+  "alert": "ALERT PodOOMKilled severity=critical namespace=default pod=orders-7f6c8b9cd8-j2l4m summary=\"High restart count on orders-7f6c8b9cd8-j2l4m in default\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"orders-7f6c8b9cd8-j2l4m\", \"namespace\": \"default\"}\n2026-02-05T09:00:01.120Z orders-7f6c8b9cd8-j2l4m app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:03.881Z orders-7f6c8b9cd8-j2l4m app[1]: INFO db query ok rows=42\n2026-02-05T09:00:08.114Z orders-7f6c8b9cd8-j2l4m app[1]: DEBUG retries=0\n2026-02-05T09:00:02.555Z orders-7f6c8b9cd8-j2l4m envoy: http2: stream closed (NO_ERROR)\n2026-02-05T09:14:22.118Z orders-7f6c8b9cd8-j2l4m kernel: Memory cgroup out of memory: Kill process 9821 (app) score 982 or sacrifice child\n2026-02-05T09:14:22.119Z orders-7f6c8b9cd8-j2l4m kernel: Killed process 9821 (app) total-vm:2147483648kB, anon-rss:812344kB\n2026-02-05T09:14:22.121Z orders-7f6c8b9cd8-j2l4m kubelet: Container orders-7f6c8b9cd8-j2l4m in default was OOMKilled\n2026-02-05T09:14:23.411Z orders-7f6c8b9cd8-j2l4m app[1]: Fatal: out of memory while allocating 128MB buffer\n2026-02-05T09:14:23.512Z orders-7f6c8b9cd8-j2l4m app[1]: stacktrace: MemoryError at allocator.cc:147",
+  "expected_root_cause": "pod_memory_oom",
+  "expected_action": "increase_memory_limit",
+  "mttr_baseline_minutes": 12.0
+}

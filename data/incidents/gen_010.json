@@ -1,0 +1,8 @@
+{
+  "id": "gen-010",
+  "alert": "ALERT CPUSaturation severity=critical namespace=checkout pod=payments-api-6b8c4f7d7c-4t2hx summary=\"HPA throttling disabled; CPU > 90% in checkout\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"payments-api-6b8c4f7d7c-4t2hx\", \"namespace\": \"checkout\"}\n2026-02-05T09:00:01.120Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:06.812Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:06.044Z payments-api-6b8c4f7d7c-4t2hx kubelet: Container payments-api-6b8c4f7d7c-4t2hx readiness probe succeeded\n2026-02-05T09:00:01.001Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO request_id=af2c latency_ms=12 status=200\n2026-02-05T09:00:08.114Z payments-api-6b8c4f7d7c-4t2hx app[1]: DEBUG retries=0\n2026-02-05T09:00:07.512Z payments-api-6b8c4f7d7c-4t2hx app[1]: INFO write path latency_ms=18\n2026-02-05T13:49:11.900Z payments-api-6b8c4f7d7c-4t2hx app[1]: WARN request backlog increasing; queue_depth=820\n2026-02-05T13:49:12.102Z payments-api-6b8c4f7d7c-4t2hx app[1]: cpu usage 92% for 5m",
+  "expected_root_cause": "cpu_spike",
+  "expected_action": "scale_deployment",
+  "mttr_baseline_minutes": 6.8
+}

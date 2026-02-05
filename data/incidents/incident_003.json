@@ -1,0 +1,8 @@
+{
+  "id": "inc-003",
+  "alert": "Node disk pressure detected",
+  "logs": "failed to create pod sandbox: no space left on device",
+  "expected_root_cause": "disk_full",
+  "expected_action": "clear_disk",
+  "mttr_baseline_minutes": 12.0
+}

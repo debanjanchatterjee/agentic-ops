@@ -1,0 +1,8 @@
+{
+  "id": "inc-007",
+  "alert": "Service timeout errors on search-api",
+  "logs": "ReadTimeout: downstream search-indexer timed out",
+  "expected_root_cause": "service_unavailable",
+  "expected_action": "restart_deployment",
+  "mttr_baseline_minutes": 5.5
+}

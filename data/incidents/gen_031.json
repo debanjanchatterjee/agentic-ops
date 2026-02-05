@@ -1,0 +1,8 @@
+{
+  "id": "gen-031",
+  "alert": "ALERT Service5xx severity=warning namespace=checkout pod=search-api-5b4c7cd6c8-9m5qk summary=\"Upstream connection failures for search-api-5b4c7cd6c8-9m5qk\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"search-api-5b4c7cd6c8-9m5qk\", \"namespace\": \"checkout\"}\n2026-02-05T09:00:01.120Z search-api-5b4c7cd6c8-9m5qk app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:03.881Z search-api-5b4c7cd6c8-9m5qk app[1]: INFO db query ok rows=42\n2026-02-05T09:00:06.044Z search-api-5b4c7cd6c8-9m5qk kubelet: Container search-api-5b4c7cd6c8-9m5qk readiness probe succeeded\n2026-02-05T14:22:35.980Z search-api-5b4c7cd6c8-9m5qk envoy: upstream connect error or disconnect/reset before headers. reset reason: connection failure\n2026-02-05T14:22:36.012Z search-api-5b4c7cd6c8-9m5qk app[1]: ReadTimeout: downstream search-indexer timed out\n2026-02-05T14:22:37.031Z search-api-5b4c7cd6c8-9m5qk app[1]: error: connection refused to http://indexer:9200",
+  "expected_root_cause": "service_unavailable",
+  "expected_action": "restart_deployment",
+  "mttr_baseline_minutes": 5.4
+}

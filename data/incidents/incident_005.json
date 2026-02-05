@@ -1,0 +1,8 @@
+{
+  "id": "inc-005",
+  "alert": "Latency regression after config rollout",
+  "logs": "config validation failed: missing timeout_ms",
+  "expected_root_cause": "bad_config",
+  "expected_action": "roll_back_config",
+  "mttr_baseline_minutes": 9.0
+}

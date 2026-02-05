@@ -1,0 +1,8 @@
+{
+  "id": "gen-032",
+  "alert": "ALERT ConfigInvalid severity=critical namespace=search pod=orders-7f6c8b9cd8-j2l4m summary=\"Config rollout caused errors for orders-7f6c8b9cd8-j2l4m\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"orders-7f6c8b9cd8-j2l4m\", \"namespace\": \"search\"}\n{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"orders-7f6c8b9cd8-j2l4m\", \"namespace\": \"search\"}\n2026-02-05T09:00:02.241Z orders-7f6c8b9cd8-j2l4m app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T09:00:08.114Z orders-7f6c8b9cd8-j2l4m app[1]: DEBUG retries=0\n2026-02-05T09:00:03.881Z orders-7f6c8b9cd8-j2l4m app[1]: INFO db query ok rows=42\n2026-02-05T09:00:02.555Z orders-7f6c8b9cd8-j2l4m envoy: http2: stream closed (NO_ERROR)\n2026-02-05T09:00:01.001Z orders-7f6c8b9cd8-j2l4m app[1]: INFO request_id=af2c latency_ms=12 status=200\n2026-02-05T09:00:07.512Z orders-7f6c8b9cd8-j2l4m app[1]: INFO write path latency_ms=18\n2026-02-05T12:03:12.202Z orders-7f6c8b9cd8-j2l4m app[1]: config validation failed: missing required field 'timeout_ms'\n2026-02-05T12:03:12.203Z orders-7f6c8b9cd8-j2l4m app[1]: startup aborted\n2026-02-05T12:03:13.114Z orders-7f6c8b9cd8-j2l4m kubelet: Container orders-7f6c8b9cd8-j2l4m in search terminated with exit code 1",
+  "expected_root_cause": "bad_config",
+  "expected_action": "roll_back_config",
+  "mttr_baseline_minutes": 8.2
+}

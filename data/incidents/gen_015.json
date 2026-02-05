@@ -1,0 +1,8 @@
+{
+  "id": "gen-015",
+  "alert": "ALERT NodeDiskPressure severity=critical namespace=checkout pod=auth-6bb9c7f8c9-v8l2x summary=\"Pod scheduling failures due to disk pressure in checkout\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"auth-6bb9c7f8c9-v8l2x\", \"namespace\": \"checkout\"}\n{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"auth-6bb9c7f8c9-v8l2x\", \"namespace\": \"checkout\"}\n2026-02-05T09:00:01.120Z auth-6bb9c7f8c9-v8l2x app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:02.555Z auth-6bb9c7f8c9-v8l2x envoy: http2: stream closed (NO_ERROR)\n2026-02-05T09:00:06.812Z auth-6bb9c7f8c9-v8l2x app[1]: INFO background job completed id=job-9122\n2026-02-05T09:00:08.114Z auth-6bb9c7f8c9-v8l2x app[1]: DEBUG retries=0\n2026-02-05T10:02:09.772Z kubelet: eviction manager: must evict pod(s) to reclaim ephemeral-storage\n2026-02-05T10:02:11.022Z auth-6bb9c7f8c9-v8l2x kubelet: Error: failed to create pod sandbox: rpc error: code = Unknown desc = failed to create containerd task: no space left on device\n2026-02-05T10:02:11.045Z auth-6bb9c7f8c9-v8l2x containerd: failed to create temp dir /var/lib/containerd/tmp: no space left on device",
+  "expected_root_cause": "disk_full",
+  "expected_action": "clear_disk",
+  "mttr_baseline_minutes": 12.1
+}

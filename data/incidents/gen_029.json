@@ -1,0 +1,8 @@
+{
+  "id": "gen-029",
+  "alert": "ALERT Service5xx severity=critical namespace=search pod=orders-7f6c8b9cd8-j2l4m summary=\"5xx error rate above 20% for orders-7f6c8b9cd8-j2l4m\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:09.310Z\", \"level\": \"INFO\", \"msg\": \"request completed\", \"http\": {\"method\": \"GET\", \"path\": \"/v1/items\", \"status\": 200, \"latency_ms\": 14}, \"trace_id\": \"f1a2b3c4d5\", \"pod\": \"orders-7f6c8b9cd8-j2l4m\", \"namespace\": \"search\"}\n2026-02-05T09:00:03.881Z orders-7f6c8b9cd8-j2l4m app[1]: INFO db query ok rows=42\n2026-02-05T09:00:05.313Z orders-7f6c8b9cd8-j2l4m app[1]: INFO healthcheck passed\n2026-02-05T09:00:01.001Z orders-7f6c8b9cd8-j2l4m app[1]: INFO request_id=af2c latency_ms=12 status=200\n2026-02-05T09:00:02.241Z orders-7f6c8b9cd8-j2l4m app[1]: DEBUG feature_flag=checkout_v2 enabled=true\n2026-02-05T14:28:03.110Z orders-7f6c8b9cd8-j2l4m app[1]: ERROR upstream closed connection before response headers\n2026-02-05T14:28:04.221Z orders-7f6c8b9cd8-j2l4m app[1]: WARN retrying upstream after 502",
+  "expected_root_cause": "service_unavailable",
+  "expected_action": "restart_deployment",
+  "mttr_baseline_minutes": 5.1
+}

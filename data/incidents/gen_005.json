@@ -1,0 +1,8 @@
+{
+  "id": "gen-005",
+  "alert": "ALERT ConfigInvalid severity=critical namespace=payments pod=search-api-5b4c7cd6c8-9m5qk summary=\"Config rollout caused errors for search-api-5b4c7cd6c8-9m5qk\"",
+  "logs": "{\"ts\": \"2026-02-05T09:00:11.221Z\", \"level\": \"ERROR\", \"msg\": \"timeout contacting upstream\", \"upstream\": \"payments-db\", \"timeout_ms\": 2000, \"trace_id\": \"9f8e7d6c5b\", \"pod\": \"search-api-5b4c7cd6c8-9m5qk\", \"namespace\": \"payments\"}\n{\"ts\": \"2026-02-05T09:00:10.011Z\", \"level\": \"WARN\", \"msg\": \"retrying upstream\", \"upstream\": \"search-indexer\", \"attempt\": 1, \"trace_id\": \"a8b7c6d5e4\", \"pod\": \"search-api-5b4c7cd6c8-9m5qk\", \"namespace\": \"payments\"}\n2026-02-05T09:00:01.120Z search-api-5b4c7cd6c8-9m5qk app[1]: INFO cache hit key=user:18491\n2026-02-05T09:00:07.512Z search-api-5b4c7cd6c8-9m5qk app[1]: INFO write path latency_ms=18\n2026-02-05T09:00:05.313Z search-api-5b4c7cd6c8-9m5qk app[1]: INFO healthcheck passed\n2026-02-05T12:08:01.501Z search-api-5b4c7cd6c8-9m5qk app[1]: ERROR invalid value for 'retries': -1\n2026-02-05T12:08:01.502Z search-api-5b4c7cd6c8-9m5qk app[1]: config schema validation failed",
+  "expected_root_cause": "bad_config",
+  "expected_action": "roll_back_config",
+  "mttr_baseline_minutes": 10.0
+}
